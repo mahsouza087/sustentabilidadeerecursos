@@ -1,1 +1,164 @@
+/* ==========================================================================
+   1. VARIÁVEIS DE AMBIENTE (:root) - Paleta Agro/Sustentabilidade de Alto Contraste
+   ========================================================================== */
+:root {
+    --cor-primaria: #1b4d3e;     /* Verde Lavouras Profundo (Estruturas e Destaques) */
+    --cor-secundaria: #0288d1;   /* Azul Hidro Vívido (Botões, Links e Elementos de Ação) */
+    --cor-fundo: #f4f7f6;        /* Cinza Claro Suave (Conforto visual no fundo) */
+    --cor-texto: #2c3e50;        /* Grafite Escuro (Excelente leitura e contraste) */
+    --cor-erro: #d32f2f;         /* Vermelho Alerta (Avisos de validação na tela) */
+    --cor-sucesso: #2e7d32;      /* Verde Sucesso (Para destacar os resultados positivos) */
+    --cor-card: #ffffff;         /* Branco Puro (Para blocos de conteúdo isolados) */
+}
 
+/* ==========================================================================
+   2. RESET GLOBAL - Consistência entre Navegadores
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografia Limpa */
+}
+
+/* ==========================================================================
+   3. ESTILIZAÇÃO ESTRUTURAL E UX
+   ========================================================================== */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-card);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+main {
+    flex: 1;
+    max-width: 800px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    background-color: var(--cor-card);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--cor-fundo);
+    padding-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   4. FORMULÁRIOS E COMPONENTES INTERATIVOS
+   ========================================================================== */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    padding: 0.8rem;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--cor-secundaria); /* Feedback visual de foco */
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-card);
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #0277bd; /* Escurece levemente no hover */
+}
+
+button:active {
+    transform: scale(0.98); /* Efeito de clique */
+}
+
+/* ==========================================================================
+   5. CONTROLE DE FEEDBACK E ESTADOS (Oculto/Visível para o JS)
+   ========================================================================== */
+.erro-visivel {
+    background-color: #ffebee;
+    color: var(--cor-erro);
+    border: 1px solid var(--cor-erro);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.erro-oculto, .resultado-oculto {
+    display: none;
+}
+
+.resultado-visivel {
+    background-color: #e8f5e9;
+    border-left: 5px solid var(--cor-sucesso);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.resultado-visivel h3 {
+    color: var(--cor-sucesso);
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   6. RODAPÉ
+   ========================================================================== */
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-card);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
