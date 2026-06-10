@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaAgro - Calculadora de Eficiência Hídrica | Agrinho 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <h1>AquaAgro 💧</h1>
+        <p>Inovação e Sustentabilidade na Gestão de Recursos Hídricos no Campo</p>
+    </header>
+
+    <main>
+        <section id="contexto">
+            <h2>Por que medir a eficiência hídrica?</h2>
+            <p>
+                Inspirado nas tecnologias de irrigação de alta eficiência, este utilitário ajuda a monitorar 
+                o volume de água utilizado por hectare. O manejo correto previne a escassez e protege a lavoura contra impactos climáticos.
+            </p>
+        </section>
+
+        <section id="calculadora">
+            <h2>Simulador de Consumo</h2>
+            <p>Insira os dados da sua propriedade para analisar o índice de sustentabilidade:</p>
+            
+            <form id="form-agua" onsubmit="return false;">
+                <label for="input-volume">Volume total de água utilizado na irrigação (em Litros):</label>
+                <input type="number" id="input-volume" placeholder="Ex: 50000" required>
+
+                <label for="input-area">Área total cultivada (em Hectares):</label>
+                <input type="number" id="input-area" placeholder="Ex: 2" required>
+
+                <button type="button" id="btn-calcular">Calcular Eficiência</button>
+            </form>
+        </section>
+
+        <section id="painel-resposta" aria-live="polite">
+            <div id="mensagem-erro" class="erro-oculto"></div>
+            <div id="resultado" class="resultado-oculto">
+                <h3>Resultado da Análise</h3>
+                <p id="texto-resultado"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto Autoral - Concurso Agrinho 2026</p>
+        <p>Tema: "Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente"</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
